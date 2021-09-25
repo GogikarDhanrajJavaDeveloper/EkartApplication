@@ -1,0 +1,14 @@
+<div class="container">
+    <h2>Card Information</h2>
+<form novalidate (ngSubmit)="createToken()" >
+    <div class="col-lg-6">
+      <input type="text" formControlName="name" placeholder="Account Holder Name">
+    </div>
+    <div class="col-lg-6">
+      <ngx-stripe-card  [options]="cardOptions" [elementsOptions]="elementsOptions" ></ngx-stripe-card>
+    </div>
+    <div clas="col-lg-12">
+     <button type="submit"> BUY </button>
+    </div>
+  </form>
+</div>

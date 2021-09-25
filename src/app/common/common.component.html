@@ -1,0 +1,8 @@
+<div class="rating">
+    <span [class]="(rating_value==0) ? 'fa fa-star' :(rating_value > 0 && rating_value < 1)? 'fa fa-star-half-alt' : 'fa fa-star' "></span>
+    <span [class]="(rating_value==1) ? 'fa fa-star' :(rating_value > 0 && rating_value < 2)? 'fa fa-star-half-alt' : 'fa fa-star' "></span>
+    <span [class]="(rating_value==2) ? 'fa fa-star' :(rating_value > 0 && rating_value < 3)? 'fa fa-star-half-alt' : 'fa fa-star' "></span>
+    <span [class]="(rating_value==3) ? 'fa fa-star' :(rating_value > 0 && rating_value < 4)? 'fa fa-star-half-alt' : 'fa fa-star' "></span>
+    <span [class]="(rating_value==4) ? 'fa fa-star' :(rating_value > 0 && rating_value < 5)? 'fa fa-star-half-alt' : 'fa fa-star' "></span>
+    <span>{{numReviews}} Reviews </span>
+</div>

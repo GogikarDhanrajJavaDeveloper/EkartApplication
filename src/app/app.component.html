@@ -1,0 +1,25 @@
+<!--
+    header 
+    main 
+    body
+-->
+<div class="grid-container">
+    <header class="row">
+        <div>
+            <a [routerLink]="['/']" class="brand">Dhanraj</a>
+        </div>
+        <div>
+            <a href="#"><i class="fa fa-shopping-cart"></i></a> 
+            <a href="#"><i class="fa fa-sign-in"></i></a>
+        </div>
+       
+    </header>
+    <main>
+        <router-outlet></router-outlet>
+    </main>
+    <footer class="row center">
+        copyright@dhanraj.in
+    </footer>
+</div>
+
+<!-- <app-common></app-common> -->

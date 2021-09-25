@@ -1,0 +1,27 @@
+<ng-http-loader [backdrop]="false"
+[backgroundColor]="'#ff0000'"
+[debounceDelay]="100"
+[extraDuration]="300"
+[minDuration]="300"
+[opacity]=".6"
+[backdropBackgroundColor]="'#777777'"
+[spinner]="spinkit.skWave" spinner="sk-wave"></ng-http-loader>
+
+<div class="row center">
+    <div *ngFor="let product of products">
+        <div class="card">
+             <a><img class="media-object" src={{product.image}}></a> 
+            <!-- <img class="media-object" [src]={{product.image}}> 
+            <img  [src]=sanitizer.bypassSecurityTrustResourceUrl(product.image)>-->
+            <div class="card-body">
+                <h1 [routerLink]="['/detail', product._id]">{{product.name}}</h1>
+                <app-common [rating_value]=product.rating
+                 [numReviews]="product.brand"></app-common>
+                <div class="price">
+                    Price ${{product.cost}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <h1>{{loading}}...{{products | json}}...{{error}}</h1> -->
